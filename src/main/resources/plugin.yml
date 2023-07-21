@@ -1,0 +1,6 @@
+name: Bewerbung
+version: 1.0.0
+main: de.zappler2k.Bewerbung
+api-version: 1.19
+commands:
+  badwords:
