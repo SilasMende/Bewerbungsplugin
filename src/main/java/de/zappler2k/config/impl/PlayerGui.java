@@ -25,7 +25,7 @@ public class PlayerGui extends Gui {
         super(9, "Loading....");
         this.messageManager = messageManager;
         int size = messageManager.getPlayerMessageConfigs().size();
-        createInventory(scaleInventorySize(size), "Chat-Verletzungen");
+        createInventory(scaleInventorySize(size), "Chat-Verstöße");
         int i = 0;
         for (PlayerMessageConfig playerMessageConfig : messageManager.getPlayerMessageConfigs()) {
             Date date = new Date(playerMessageConfig.getTimeStamp());
@@ -49,7 +49,7 @@ public class PlayerGui extends Gui {
                         }
                     } else if(event.getClick().equals(ClickType.RIGHT)) {
                         messageManager.deleteBadWord(playerMessageConfig.getTimeStamp());
-                        event.getWhoClicked().sendMessage("^Die Chat-Verletzung von " + playerMessageConfig.getName() + " vom " + date + "wurde entfernt.");
+                        event.getWhoClicked().sendMessage("^Die Chat-Verstöße von " + playerMessageConfig.getName() + " vom " + date + "wurde entfernt.");
                         messageManager.getPlayerMessageConfigs().remove(messageManager.getConfigByName(playerMessageConfig.getName()));
                         event.getWhoClicked().closeInventory();
                     }

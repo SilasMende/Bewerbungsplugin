@@ -22,6 +22,7 @@ public class Bewerbung extends JavaPlugin {
         MySQLConnector mySQLConnector = new MySQLConnector(configManager);
         mySQLConnector.connect();
         if (!mySQLConnector.isConnected()) {
+            Bukkit.getServer().getPluginManager().disablePlugin(this);
             return;
         }
         MessageManager messageManager = new MessageManager(mySQLConnector, this, configManager);

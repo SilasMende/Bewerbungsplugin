@@ -19,13 +19,13 @@ public class JoinListener implements Listener {
         int size = messageManager.getPlayerMessageConfigs().size();
         switch (size) {
             case 0 -> {
-                event.getPlayer().sendMessage(ChatColor.GRAY + "Es sind gerade keine Chat-Verletzungen offen.");
+                event.getPlayer().sendMessage(ChatColor.GRAY + "Es sind gerade keine Chat-Verstöße offen.");
             }
             case 1 -> {
-                event.getPlayer().sendMessage(ChatColor.GRAY + "Es ist gerade " + size + " Chat-Verletzung offen.");
+                event.getPlayer().sendMessage(ChatColor.GRAY + "Es ist gerade " + size + " CChat-Verstoß offen.");
             }
             default -> {
-                event.getPlayer().sendMessage(ChatColor.GRAY + "Es sind gerade " + size + " Chat-Verletzungen offen.");
+                event.getPlayer().sendMessage(ChatColor.GRAY + "Es sind gerade " + size + " Chat-Verstöße offen.");
             }
         }
     }
